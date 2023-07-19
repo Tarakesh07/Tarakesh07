@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Two way data binding">
+        <div class="slds-p-around_medium lgc-bg">
+            <lightning-input type="text" label="Enter course" onkeyup={changeHandler}></lightning-input>
+            <div>Hello i am learing {course}</div>
+        </div>
+    </lightning-card>   
+</template>
+
+
+
+Js file :
+
+import { LightningElement } from 'lwc';
+
+export default class HelloWorld extends LightningElement {
+    course = "lwc";
+    changeHandler(event){
+        this.course=event.target.value
+
+    }
+    
+}
